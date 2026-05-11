@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="개항 이후 서구 문물의 도입과 사회 변화를 발표하기 위한 인터랙티브 한국사 웹사이트"
+    />
+    <title>근대의 빛과 그림자 | 한국사 발표</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <script type="module" src="./dist/main.js"></script>
+  </head>
+  <body data-lens="convenience">
+    <div class="progress-shell" aria-hidden="true">
+      <div class="progress-bar"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="#intro" aria-label="처음으로 이동">
+        <span class="brand-mark"></span>
+        <span>근대의 빛과 그림자</span>
+      </a>
+      <nav class="chapter-nav" aria-label="발표 구간">
+        <button type="button" data-jump="#timeline">연표</button>
+        <button type="button" data-jump="#network">시설</button>
+        <button type="button" data-jump="#life">생활</button>
+        <button type="button" data-jump="#tension">양면성</button>
+        <button type="button" data-jump="#closing">결론</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="hero chapter" data-cue="문을 여는 질문: 새로운 기술은 언제 삶의 방식까지 바꾸는가?">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Electric_trolley%2C_Korea_1903.jpg?width=1200"
+            alt=""
+          />
+          <div class="hero-shade"></div>
+          <div class="wire-grid"></div>
+          <div class="signal-light signal-one"></div>
+          <div class="signal-light signal-two"></div>
+        </div>
+        <div class="hero-copy" data-reveal>
+          <p class="kicker">개항 이후 조선, 낯선 기술이 일상을 다시 짜다</p>
+          <h1>서구 문물의 도입과 사회 변화</h1>
+          <p class="hero-lead">
+            전등, 우편, 전차, 철도, 서양식 병원과 건축은 단순한 새 물건이 아니었다. 이동의 속도,
+            밤의 길이, 소식을 주고받는 방식, 그리고 사람들이 시간을 이해하는 방식까지 바꾸기 시작했다.
+          </p>
+          <div class="hero-facts" aria-label="핵심 발표 포인트">
+            <span>1883 박문국·기기창·전환국</span>
+            <span>1885 광혜원</span>
+            <span>1899 전차·경인선</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="chapter chronology" data-cue="연도는 사건 암기가 아니라 변화가 연결되는 순서로 설명한다.">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">시간을 따라 보는 변화</p>
+          <h2>1883년부터 1906년까지, 근대 시설의 리듬</h2>
+          <p>
+            개항 이후 정부의 개화 정책, 선교사와 외국 기술, 열강의 이권 경쟁이 한성의 거리와 사람들의
+            생활 감각을 함께 흔들었다.
+          </p>
+        </div>
+        <div class="timeline-console" data-reveal>
+          <div class="timeline-rail" aria-hidden="true">
+            <span class="rail-glow"></span>
+            <span class="rail-car"></span>
+          </div>
+          <div class="timeline-events" aria-label="근대 시설 연표"></div>
+          <div class="scrubber-panel">
+            <label for="year-scrubber">연표 초점</label>
+            <input id="year-scrubber" type="range" min="0" max="6" value="0" step="1" />
+            <article class="year-card" aria-live="polite"></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="network" class="chapter network" data-cue="시설을 각각의 이름보다 생활 방식의 변화로 묶어 말한다.">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">도시를 연결한 새 장치들</p>
+          <h2>신문, 화폐, 우편, 병원, 전등과 철도</h2>
+          <p>
+            근대 시설은 정보를 찍어 내고, 돈을 표준화하고, 몸을 치료하고, 도시의 밤과 거리를 새롭게
+            연결했다.
+          </p>
+        </div>
+        <div class="network-board" data-reveal>
+          <div class="node-map" aria-hidden="true">
+            <span class="node node-print"></span>
+            <span class="node node-post"></span>
+            <span class="node node-light"></span>
+            <span class="node node-train"></span>
+            <span class="node node-hospital"></span>
+          </div>
+          <div class="facility-grid"></div>
+        </div>
+      </section>
+
+      <section id="life" class="chapter life" data-cue="의식주 변화는 도시와 상류층 중심이었다는 한계를 같이 짚는다.">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">의식주의 장면 변화</p>
+          <h2>양복, 커피, 서양식 건축이 만든 낯선 풍경</h2>
+          <p>
+            옷과 음식과 집은 가장 개인적인 생활 영역이다. 그래서 변화가 더 눈에 띄었지만, 그 변화는
+            모두에게 같은 속도로 오지 않았다.
+          </p>
+        </div>
+        <div class="gallery-stage" data-reveal>
+          <div class="gallery-copy">
+            <h3>생활의 표면이 바뀌면 사고방식도 흔들린다</h3>
+            <p>
+              양복과 양장, 양산과 구두, 서양식 오찬과 커피, 정관헌과 석조전 같은 건축물은 새로운
+              생활양식의 상징이었다. 그러나 일반 백성의 삶과는 거리가 있었고, 변화의 중심은 도시와
+              상류층이었다.
+            </p>
+          </div>
+          <div class="visual-gallery" aria-label="근대 생활 변화 이미지"></div>
+        </div>
+      </section>
+
+      <section id="tension" class="chapter tension" data-cue="핵심 논점: 편리함과 침략의 도구라는 두 얼굴을 동시에 보여준다.">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">하나의 변화, 두 개의 얼굴</p>
+          <h2>편리함을 만든 기술은 왜 갈등도 만들었을까?</h2>
+          <p>
+            철도와 전차는 이동을 빠르게 했지만, 철도 부설 과정에서는 토지 강제 수용과 노역 동원이
+            일어났다. 일부 시설은 제국주의 침략에도 이용되었다.
+          </p>
+        </div>
+        <div class="lens-switcher" data-reveal>
+          <div class="segmented" role="tablist" aria-label="관점 전환">
+            <button type="button" role="tab" aria-selected="true" data-lens="convenience">생활의 편리함</button>
+            <button type="button" role="tab" aria-selected="false" data-lens="pressure">침략과 불평등</button>
+          </div>
+          <div class="lens-grid">
+            <article class="lens-card">
+              <h3>기술</h3>
+              <p data-lens-copy="technology"></p>
+            </article>
+            <article class="lens-card">
+              <h3>사람</h3>
+              <p data-lens-copy="people"></p>
+            </article>
+            <article class="lens-card">
+              <h3>시간</h3>
+              <p data-lens-copy="time"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="closing" class="chapter closing" data-cue="마무리: 기술을 볼 때 편리함과 사회적 영향을 함께 질문하자.">
+        <div class="closing-inner" data-reveal>
+          <p class="kicker">발표의 결론</p>
+          <h2>새 기술은 사회를 바꾸지만, 그 방향은 언제나 질문해야 한다</h2>
+          <p>
+            개항 이후의 근대 시설은 삶을 편리하게 만들었고, 시간·공간·의식주를 바꾸었다. 동시에 그
+            변화는 상류층과 도시 중심으로 제한되었고, 외세의 침략과 불평등 속에서 진행되었다. 그래서
+            이 단원은 과거의 생활 변화만이 아니라 오늘날의 기술을 바라보는 기준도 남긴다.
+          </p>
+          <div class="closing-lines" aria-label="마무리 문장">
+            <span>무엇이 편리해졌는가?</span>
+            <span>누가 그 비용을 부담했는가?</span>
+            <span>기술은 누구를 위해 쓰였는가?</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="presenter-dock" aria-label="발표 진행 도구">
+      <button type="button" class="icon-button" data-presenter="prev" aria-label="이전 구간">‹</button>
+      <div class="dock-status">
+        <strong data-current-section>도입</strong>
+        <span data-current-cue>발표 흐름을 불러오는 중</span>
+      </div>
+      <button type="button" class="icon-button" data-presenter="next" aria-label="다음 구간">›</button>
+    </aside>
+
+    <footer class="site-footer">
+      <p>
+        내용 기반: 저장소의 readme.md 교과서 정리. 이미지:
+        <a href="https://commons.wikimedia.org/wiki/File:Electric_trolley,_Korea_1903.jpg">Electric trolley, Korea 1903</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Gwanghyewon.jpg">Gwanghyewon</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Deoksugung-jeonggwanheon.jpg">Deoksugung Jeonggwanheon</a>,
+        <a href="https://commons.wikimedia.org/wiki/File:Seokjojeon.jpg">Seokjojeon</a>.
+      </p>
+    </footer>
+
+    <noscript>이 발표 웹사이트는 인터랙션을 위해 JavaScript가 필요합니다.</noscript>
+  </body>
+</html>
