@@ -438,7 +438,7 @@ p {
 
 .scrubber-panel {
   display: grid;
-  grid-template-columns: minmax(180px, 260px) 1fr minmax(320px, 480px);
+  grid-template-columns: minmax(160px, 220px) 1fr;
   align-items: center;
   gap: 22px;
   margin-top: 28px;
@@ -459,9 +459,63 @@ input[type="range"] {
 }
 
 .year-card {
-  min-height: 210px;
-  padding-left: 22px;
-  border-left: 4px solid var(--cinnabar);
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(280px, 0.88fr) 1fr;
+  min-height: 390px;
+  overflow: hidden;
+  border: 1px solid rgba(24, 21, 17, 0.12);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 18px 46px rgba(24, 21, 17, 0.12);
+}
+
+.year-visual {
+  position: relative;
+  min-height: 390px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--night);
+}
+
+.year-visual::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.62), transparent 44%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.32), transparent 52%);
+}
+
+.year-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+  filter: sepia(0.12) saturate(0.9) contrast(1.04);
+}
+
+.year-visual figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.year-visual a {
+  color: inherit;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+}
+
+.year-story {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 34px;
 }
 
 .year-chip {
@@ -475,145 +529,45 @@ input[type="range"] {
   font-weight: 900;
 }
 
-.year-card h3 {
-  margin-top: 12px;
-}
-
-.year-card p {
-  margin-bottom: 12px;
-  color: var(--ink-soft);
-}
-
-.network {
-  color: var(--porcelain);
-  background:
-    linear-gradient(135deg, rgba(182, 65, 46, 0.08), transparent 42%),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.03), transparent),
-    #1d211d;
-}
-
-.network .section-heading p:last-child {
-  color: rgba(246, 247, 242, 0.72);
-}
-
-.network-board {
-  position: relative;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 42px;
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto 90px;
-  align-items: center;
-}
-
-.node-map {
-  position: relative;
-  min-height: 500px;
-  overflow: hidden;
-  border: 1px solid rgba(246, 247, 242, 0.14);
+.facility-label {
+  width: fit-content;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(182, 65, 46, 0.24);
   border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(246, 247, 242, 0.08) 1px, transparent 1px) 0 0 / 46px 46px,
-    linear-gradient(0deg, rgba(246, 247, 242, 0.08) 1px, transparent 1px) 0 0 / 46px 46px,
-    radial-gradient(circle at 50% 50%, rgba(194, 139, 44, 0.16), transparent 45%);
-}
-
-.node-map::before {
-  position: absolute;
-  inset: 12%;
-  content: "";
-  border: 2px dashed rgba(246, 247, 242, 0.26);
-  border-radius: 50%;
-  animation: orbit 16s linear infinite;
-}
-
-.node-map::after {
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  top: 50%;
-  height: 5px;
-  content: "";
-  background: linear-gradient(90deg, transparent, var(--brass), var(--teal), transparent);
-  transform: rotate(-18deg);
-}
-
-.node {
-  position: absolute;
-  width: 76px;
-  height: 76px;
-  border: 2px solid rgba(246, 247, 242, 0.52);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.86) 0 8px, transparent 9px),
-    radial-gradient(circle, rgba(194, 139, 44, 0.92), rgba(182, 65, 46, 0.82));
-  box-shadow: 0 0 36px rgba(194, 139, 44, 0.25);
-}
-
-.node-print {
-  left: 18%;
-  top: 18%;
-}
-
-.node-post {
-  right: 18%;
-  top: 22%;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.86) 0 8px, transparent 9px),
-    radial-gradient(circle, rgba(18, 107, 102, 0.92), rgba(64, 90, 57, 0.82));
-}
-
-.node-light {
-  left: 42%;
-  top: 42%;
-}
-
-.node-train {
-  left: 22%;
-  bottom: 16%;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.86) 0 8px, transparent 9px),
-    radial-gradient(circle, rgba(91, 63, 116, 0.9), rgba(43, 95, 117, 0.82));
-}
-
-.node-hospital {
-  right: 20%;
-  bottom: 18%;
-}
-
-.facility-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.facility-card {
-  min-height: 194px;
-  padding: 22px;
-  border: 1px solid rgba(246, 247, 242, 0.15);
-  border-radius: 8px;
-  background: rgba(246, 247, 242, 0.08);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
-}
-
-.facility-card span {
-  display: inline-flex;
-  min-height: 32px;
-  align-items: center;
-  padding: 0 10px;
-  border-radius: 8px;
-  color: var(--night);
-  background: var(--accent);
+  color: var(--cinnabar);
+  background: rgba(182, 65, 46, 0.08);
   font-size: 0.9rem;
   font-weight: 900;
 }
 
-.facility-card h3 {
-  margin-top: 18px;
+.year-story h3 {
+  font-size: 2rem;
 }
 
-.facility-card p {
-  color: rgba(246, 247, 242, 0.76);
+.year-story p:not(.facility-label) {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.impact-line {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 18px;
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  background: rgba(18, 107, 102, 0.08);
+}
+
+.impact-line span {
+  color: var(--teal);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.impact-line strong {
+  line-height: 1.6;
 }
 
 .life {
@@ -866,7 +820,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
 }
 
 [data-reveal],
-.facility-card,
 .history-image,
 .lens-card {
   opacity: 0;
@@ -877,7 +830,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
 }
 
 [data-reveal].is-visible,
-.facility-card.is-visible,
 .history-image.is-visible,
 .lens-card.is-visible {
   opacity: 1;
@@ -933,15 +885,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   }
 }
 
-@keyframes orbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -969,11 +912,19 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   }
 
   .scrubber-panel,
-  .network-board,
   .gallery-stage,
   .lens-grid,
   .closing-lines {
     grid-template-columns: 1fr;
+  }
+
+  .year-card {
+    grid-template-columns: 1fr;
+  }
+
+  .year-visual,
+  .year-visual img {
+    min-height: 330px;
   }
 
   .gallery-copy {
@@ -1021,7 +972,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   }
 
   .timeline-console,
-  .network-board,
   .gallery-stage,
   .lens-switcher {
     width: min(100% - 28px, 1120px);
@@ -1039,12 +989,32 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
     padding: 18px;
   }
 
-  .facility-grid {
-    grid-template-columns: 1fr;
+  .year-story {
+    gap: 8px;
+    padding: 20px;
   }
 
-  .node-map {
-    min-height: 360px;
+  .year-story h3 {
+    font-size: 1.55rem;
+  }
+
+  .year-visual,
+  .year-visual img {
+    min-height: 240px;
+  }
+
+  .year-visual {
+    height: 240px;
+  }
+
+  .year-visual img {
+    display: block;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .impact-line {
+    padding: 14px;
   }
 
   .presenter-dock {

@@ -1,15 +1,15 @@
                       
                
                 
+                   
                   
                  
-  
-
-                 
+          
                 
                 
-               
+                   
                  
+    
   
 
                     
@@ -31,83 +31,93 @@ const timeline                  = [
   {
     year: '1883',
     title: '박문국·기기창·전환국',
+    facility: '신문·무기·화폐 제도의 출발',
     summary: '신문 발간, 근대식 무기 공장, 화폐 주조 기관이 함께 등장했다.',
-    impact: '정보, 군사 기술, 경제 제도가 근대적 방식으로 정비되기 시작했다.'
+    impact: '정보, 군사 기술, 경제 제도가 근대적 방식으로 정비되기 시작했다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Hanseong_Sunbo.jpg?width=900',
+      alt: '한성순보 창간호',
+      credit: '한성순보 창간호, Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Hanseong_Sunbo.jpg'
+    }
   },
   {
     year: '1884',
     title: '우정총국',
+    facility: '근대식 우편 사무',
     summary: '근대식 우편 사무가 도입되었지만 갑신정변 이후 약 10여 년 동안 중단되었다.',
-    impact: '소식이 제도와 속도의 문제로 바뀌는 출발점이었다.'
+    impact: '소식이 제도와 속도의 문제로 바뀌는 출발점이었다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Post%20Office%20building%2C%20Seoul%2C%201893%20%281%29%20%2826259287247%29.jpg?width=1100',
+      alt: '서울 우정총국 건물',
+      credit: '우정총국 건물, Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/Category:Ujeongchongguk'
+    }
   },
   {
     year: '1885',
     title: '광혜원',
+    facility: '최초의 서양식 병원',
     summary: '알렌의 건의로 최초의 서양식 병원이 세워지고 제중원으로 이어졌다.',
-    impact: '서양 의학은 개신교 선교사들을 통해 들어오며 치료의 방식을 바꾸었다.'
+    impact: '서양 의학은 개신교 선교사들을 통해 들어오며 치료의 방식을 바꾸었다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gwanghyewon.jpg?width=1000',
+      alt: '광혜원 건물',
+      credit: '광혜원, Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Gwanghyewon.jpg'
+    }
   },
   {
     year: '1887',
     title: '경복궁 전등',
+    facility: '전기와 궁궐의 밤',
     summary: '전기 기술 도입으로 궁궐에 최초의 전등이 설치되었다.',
-    impact: '밤에도 활동할 수 있는 공간이 생기며 도시의 시간 감각이 확장되었다.'
+    impact: '밤에도 활동할 수 있는 공간이 생기며 도시의 시간 감각이 확장되었다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gyeongbokgung_1906_1.jpg?width=1100',
+      alt: '1906년 경복궁 전경',
+      credit: '경복궁 1906, Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Gyeongbokgung_1906_1.jpg'
+    }
   },
   {
     year: '1899',
     title: '전차와 경인선',
+    facility: '도시 전차와 첫 철도',
     summary: '서대문과 청량리를 잇는 전차가 개통되고, 경인선 철도도 운행을 시작했다.',
-    impact: '사람과 물자의 이동 속도가 빨라지고 정시 출발이라는 시간 감각이 퍼졌다.'
+    impact: '사람과 물자의 이동 속도가 빨라지고 정시 출발이라는 시간 감각이 퍼졌다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Opening_of_the_Trams_in_Seoul_(1899).png?width=1100',
+      alt: '1899년 서울 전차 개통 장면',
+      credit: '서울 전차 개통, 서울역사박물관 / Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Opening_of_the_Trams_in_Seoul_(1899).png'
+    }
   },
   {
     year: '1905',
     title: '경부선',
+    facility: '경성에서 부산까지 이어진 철도',
     summary: '한반도 남북의 주요 거점을 잇는 철도가 일본에 의해 부설되었다.',
-    impact: '편리함 뒤에는 이권 침탈과 강제 수용, 노역 동원이라는 갈등이 있었다.'
+    impact: '편리함 뒤에는 이권 침탈과 강제 수용, 노역 동원이라는 갈등이 있었다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Formal_Opening_Inside_Of_Gyeongbu_Train.png?width=1100',
+      alt: '경부철도 개통식 내부 장면',
+      credit: '경부철도 개통식, Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:Formal_Opening_Inside_Of_Gyeongbu_Train.png'
+    }
   },
   {
     year: '1906',
     title: '경의선',
+    facility: '더 넓어진 철도망',
     summary: '경의선 개통으로 철도망은 더 넓은 지역을 연결했다.',
-    impact: '근대적 연결망은 생활을 바꾸는 동시에 제국주의적 지배의 통로가 되기도 했다.'
-  }
-];
-
-const facilities             = [
-  {
-    title: '박문국',
-    label: '신문',
-    body: '인쇄와 신문 발간은 소식이 더 넓고 빠르게 퍼지는 사회를 만들었다.',
-    accent: '#b6412e'
-  },
-  {
-    title: '전환국',
-    label: '화폐',
-    body: '화폐 주조 기관은 경제 질서를 근대적 제도로 정비하려는 움직임이었다.',
-    accent: '#c28b2c'
-  },
-  {
-    title: '우정총국',
-    label: '우편',
-    body: '편지와 공문은 개인의 소식이자 국가 운영의 속도를 바꾸는 매체가 되었다.',
-    accent: '#126b66'
-  },
-  {
-    title: '광혜원',
-    label: '의학',
-    body: '서양 의학과 병원은 몸을 치료하는 방식 자체를 새롭게 보여 주었다.',
-    accent: '#7b4e9f'
-  },
-  {
-    title: '전등·전화',
-    label: '전기',
-    body: '불빛과 목소리가 거리를 건너며 밤과 소통의 경계가 달라졌다.',
-    accent: '#d18b2f'
-  },
-  {
-    title: '전차·철도',
-    label: '이동',
-    body: '정시에 움직이는 교통망은 이동의 편리함과 표준 시간의 필요를 동시에 만들었다.',
-    accent: '#2b5f75'
+    impact: '근대적 연결망은 생활을 바꾸는 동시에 제국주의적 지배의 통로가 되기도 했다.',
+    image: {
+      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/1906년의_용산역.jpg?width=1100',
+      alt: '1906년 무렵 용산역',
+      credit: '1906년 용산역, 서울역사아카이브 / Wikimedia Commons',
+      href: 'https://commons.wikimedia.org/wiki/File:1906%EB%85%84%EC%9D%98_%EC%9A%A9%EC%82%B0%EC%97%AD.jpg'
+    }
   }
 ];
 
@@ -148,7 +158,6 @@ const lensCopy                             = {
 const sectionTitles = new Map                ([
   ['intro', '도입'],
   ['timeline', '연표'],
-  ['network', '근대 시설'],
   ['life', '의식주 변화'],
   ['tension', '양면성'],
   ['closing', '결론']
@@ -190,10 +199,22 @@ const renderTimeline = () => {
       button.classList.toggle('is-active', buttonIndex === index);
     });
     card.innerHTML = `
-      <span class="year-chip">${event.year}</span>
-      <h3>${event.title}</h3>
-      <p>${event.summary}</p>
-      <strong>${event.impact}</strong>
+      <figure class="year-visual">
+        <img src="${event.image.src}" alt="${event.image.alt}" loading="eager" />
+        <figcaption>
+          <a href="${event.image.href}" target="_blank" rel="noreferrer">${event.image.credit}</a>
+        </figcaption>
+      </figure>
+      <div class="year-story">
+        <span class="year-chip">${event.year}</span>
+        <p class="facility-label">${event.facility}</p>
+        <h3>${event.title}</h3>
+        <p>${event.summary}</p>
+        <div class="impact-line">
+          <span>사회 변화</span>
+          <strong>${event.impact}</strong>
+        </div>
+      </div>
     `;
   };
 
@@ -205,20 +226,6 @@ const renderTimeline = () => {
 
   scrubber.addEventListener('input', () => update(Number(scrubber.value)));
   update(0);
-};
-
-const renderFacilities = () => {
-  query             ('.facility-grid').innerHTML = facilities
-    .map(
-      (facility) => `
-        <article class="facility-card" style="--accent:${facility.accent}">
-          <span>${facility.label}</span>
-          <h3>${facility.title}</h3>
-          <p>${facility.body}</p>
-        </article>
-      `
-    )
-    .join('');
 };
 
 const renderGallery = () => {
@@ -270,7 +277,7 @@ const setupReveal = () => {
     { threshold: 0.18 }
   );
 
-  queryAll             ('[data-reveal], .facility-card, .history-image, .lens-card').forEach((element) => {
+  queryAll             ('[data-reveal], .history-image, .lens-card').forEach((element) => {
     observer.observe(element);
   });
 };
@@ -346,7 +353,6 @@ const setupParallax = () => {
 };
 
 renderTimeline();
-renderFacilities();
 renderGallery();
 setupLens();
 setupReveal();
