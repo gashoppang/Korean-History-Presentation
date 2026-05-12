@@ -22,7 +22,7 @@
         <span>근대의 빛과 그림자</span>
       </a>
       <nav class="chapter-nav" aria-label="발표 구간">
-        <button type="button" data-jump="#timeline">연표</button>
+        <button type="button" data-jump="#timeline">전차</button>
         <button type="button" data-jump="#life">생활</button>
         <button type="button" data-jump="#tension">양면성</button>
         <button type="button" data-jump="#closing">결론</button>
@@ -56,26 +56,46 @@
         </div>
       </section>
 
-      <section id="timeline" class="chapter chronology" data-cue="연도는 사건 암기가 아니라 변화가 연결되는 순서로 설명한다.">
+      <section id="timeline" class="chapter chronology" data-cue="전차의 속도감처럼 장면을 넘기며 근대의 속도와 공간 감각을 설명한다.">
         <div class="section-heading" data-reveal>
-          <p class="kicker">시간을 따라 보는 변화</p>
-          <h2>1883년부터 1906년까지, 근대 시설의 리듬</h2>
+          <p class="kicker">전차를 타고 보는 변화</p>
+          <h2>근대의 속도는 선로 위에서 달리기 시작했다</h2>
           <p>
             개항 이후 정부의 개화 정책, 선교사와 외국 기술, 열강의 이권 경쟁이 한성의 거리와 사람들의
-            생활 감각을 함께 흔들었다. 연표의 각 사건은 사진과 함께 확인하며, 시설이 어떤 변화를
-            만들었는지 바로 이어서 볼 수 있다.
+            생활 감각을 함께 흔들었다. 1899년 전차의 등장은 그 변화를 상징하는 장면이었다. 연도별
+            장면을 넘기며 근대 시설이 도시의 속도와 시간을 어떻게 바꾸었는지 따라가 보자.
           </p>
         </div>
-        <div class="timeline-console" data-reveal>
-          <div class="timeline-rail" aria-hidden="true">
-            <span class="rail-glow"></span>
-            <span class="rail-car"></span>
+        <div class="tram-journey" data-reveal>
+          <div class="tram-atmosphere" aria-hidden="true">
+            <span class="tram-wire tram-wire-one"></span>
+            <span class="tram-wire tram-wire-two"></span>
+            <span class="tram-spark tram-spark-one"></span>
+            <span class="tram-spark tram-spark-two"></span>
           </div>
-          <div class="timeline-events" aria-label="근대 시설 연표"></div>
-          <div class="scrubber-panel">
-            <label for="year-scrubber">연표 초점</label>
-            <input id="year-scrubber" type="range" min="0" max="6" value="0" step="1" />
-            <article class="year-card" aria-live="polite"></article>
+          <div class="tram-heading">
+            <div>
+              <p class="kicker">한성 전차의 속도감</p>
+              <h3 data-tram-title>박문국·기기창·전환국</h3>
+            </div>
+            <div class="tram-ticket" aria-label="현재 연도">
+              <span data-tram-year>1883</span>
+              <small>현재 장면</small>
+            </div>
+          </div>
+          <div class="tram-track" aria-label="시간 순서 이동 연도">
+            <div class="tram-car" aria-hidden="true">
+              <span class="tram-roof"></span>
+              <span class="tram-window-light"></span>
+              <span class="tram-wheel tram-wheel-left"></span>
+              <span class="tram-wheel tram-wheel-right"></span>
+            </div>
+            <div class="tram-stops"></div>
+          </div>
+          <div class="tram-window" tabindex="0" aria-label="시간 순서대로 배치된 근대 시설 장면"></div>
+          <div class="tram-controls">
+            <button type="button" class="tram-arrow" data-tram-prev aria-label="이전 장면">‹</button>
+            <button type="button" class="tram-arrow" data-tram-next aria-label="다음 장면">›</button>
           </div>
         </div>
       </section>
@@ -153,10 +173,6 @@
 
     <aside class="presenter-dock" aria-label="발표 진행 도구">
       <button type="button" class="icon-button" data-presenter="prev" aria-label="이전 구간">‹</button>
-      <div class="dock-status">
-        <strong data-current-section>도입</strong>
-        <span data-current-cue>발표 흐름을 불러오는 중</span>
-      </div>
       <button type="button" class="icon-button" data-presenter="next" aria-label="다음 구간">›</button>
     </aside>
 

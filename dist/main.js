@@ -1,7 +1,9 @@
-                      
+                     
                
                 
                    
+                 
+                    
                   
                  
           
@@ -27,11 +29,13 @@
                
   
 
-const timeline                  = [
+const historyScenes                 = [
   {
     year: '1883',
     title: '박문국·기기창·전환국',
     facility: '신문·무기·화폐 제도의 출발',
+    signal: '정보와 제도',
+    effects: ['정보 확산', '화폐 표준화', '군사 기술'],
     summary: '신문 발간, 근대식 무기 공장, 화폐 주조 기관이 함께 등장했다.',
     impact: '정보, 군사 기술, 경제 제도가 근대적 방식으로 정비되기 시작했다.',
     image: {
@@ -45,6 +49,8 @@ const timeline                  = [
     year: '1884',
     title: '우정총국',
     facility: '근대식 우편 사무',
+    signal: '소식의 속도',
+    effects: ['소통 제도', '국가 행정', '중단과 재개'],
     summary: '근대식 우편 사무가 도입되었지만 갑신정변 이후 약 10여 년 동안 중단되었다.',
     impact: '소식이 제도와 속도의 문제로 바뀌는 출발점이었다.',
     image: {
@@ -58,6 +64,8 @@ const timeline                  = [
     year: '1885',
     title: '광혜원',
     facility: '최초의 서양식 병원',
+    signal: '서양 의학',
+    effects: ['병원 공간', '선교사 의학', '치료 방식'],
     summary: '알렌의 건의로 최초의 서양식 병원이 세워지고 제중원으로 이어졌다.',
     impact: '서양 의학은 개신교 선교사들을 통해 들어오며 치료의 방식을 바꾸었다.',
     image: {
@@ -71,6 +79,8 @@ const timeline                  = [
     year: '1887',
     title: '경복궁 전등',
     facility: '전기와 궁궐의 밤',
+    signal: '밤의 확장',
+    effects: ['전기 기술', '밤의 활동', '도시 감각'],
     summary: '전기 기술 도입으로 궁궐에 최초의 전등이 설치되었다.',
     impact: '밤에도 활동할 수 있는 공간이 생기며 도시의 시간 감각이 확장되었다.',
     image: {
@@ -84,6 +94,8 @@ const timeline                  = [
     year: '1899',
     title: '전차와 경인선',
     facility: '도시 전차와 첫 철도',
+    signal: '움직이는 도시',
+    effects: ['이동 속도', '도시 연결', '정시 생활'],
     summary: '서대문과 청량리를 잇는 전차가 개통되고, 경인선 철도도 운행을 시작했다.',
     impact: '사람과 물자의 이동 속도가 빨라지고 정시 출발이라는 시간 감각이 퍼졌다.',
     image: {
@@ -97,6 +109,8 @@ const timeline                  = [
     year: '1905',
     title: '경부선',
     facility: '경성에서 부산까지 이어진 철도',
+    signal: '전국의 연결',
+    effects: ['교통 편리', '토지 수용', '이권 침탈'],
     summary: '한반도 남북의 주요 거점을 잇는 철도가 일본에 의해 부설되었다.',
     impact: '편리함 뒤에는 이권 침탈과 강제 수용, 노역 동원이라는 갈등이 있었다.',
     image: {
@@ -110,6 +124,8 @@ const timeline                  = [
     year: '1906',
     title: '경의선',
     facility: '더 넓어진 철도망',
+    signal: '철도망 확대',
+    effects: ['공간 압축', '군사 이동', '지배 통로'],
     summary: '경의선 개통으로 철도망은 더 넓은 지역을 연결했다.',
     impact: '근대적 연결망은 생활을 바꾸는 동시에 제국주의적 지배의 통로가 되기도 했다.',
     image: {
@@ -155,14 +171,6 @@ const lensCopy                             = {
   }
 };
 
-const sectionTitles = new Map                ([
-  ['intro', '도입'],
-  ['timeline', '연표'],
-  ['life', '의식주 변화'],
-  ['tension', '양면성'],
-  ['closing', '결론']
-]);
-
 const query =                    (selector        , scope             = document)    => {
   const element = scope.querySelector(selector);
   if (!element) {
@@ -175,56 +183,139 @@ const queryAll =                    (selector        , scope             = docum
   return Array.from(scope.querySelectorAll(selector))       ;
 };
 
-const renderTimeline = () => {
-  const list = query             ('.timeline-events');
-  const card = query             ('.year-card');
-  const scrubber = query                  ('#year-scrubber');
+const renderTramLine = () => {
+  const tram = query             ('.tram-journey');
+  const stops = query             ('.tram-stops');
+  const windowStrip = query             ('.tram-window');
+  const title = query             ('[data-tram-title]');
+  const year = query             ('[data-tram-year]');
+  const previous = query                   ('[data-tram-prev]');
+  const next = query                   ('[data-tram-next]');
+  let activeIndex = 0;
 
-  list.innerHTML = timeline
+  stops.innerHTML = historyScenes
     .map(
       (event, index) => `
-        <button class="timeline-dot" type="button" data-year-index="${index}" aria-label="${event.year} ${event.title}">
+        <button
+          class="tram-stop"
+          type="button"
+          data-scene-index="${index}"
+          aria-label="${event.year} ${event.title}"
+        >
           <span>${event.year}</span>
-          <strong>${event.title}</strong>
         </button>
       `
     )
     .join('');
 
-  const update = (index        ) => {
-    const event = timeline[index];
-    scrubber.value = String(index);
-    document.documentElement.style.setProperty('--timeline-progress', `${index / (timeline.length - 1)}`);
-    queryAll                   ('.timeline-dot', list).forEach((button, buttonIndex) => {
-      button.classList.toggle('is-active', buttonIndex === index);
+  windowStrip.innerHTML = historyScenes
+    .map(
+      (event, index) => `
+        <article class="tram-panel" data-scene-index="${index}" tabindex="0">
+          <figure class="tram-photo">
+            <img src="${event.image.src}" alt="${event.image.alt}" loading="${index === 0 ? 'eager' : 'lazy'}" />
+            <figcaption>
+              <a href="${event.image.href}" target="_blank" rel="noreferrer">${event.image.credit}</a>
+            </figcaption>
+          </figure>
+          <div class="tram-story">
+            <div class="tram-meta">
+              <span>장면 ${String(index + 1).padStart(2, '0')}</span>
+              <span>${event.year}</span>
+              <span>${event.signal}</span>
+            </div>
+            <h3>${event.title}</h3>
+            <p class="tram-facility">${event.facility}</p>
+            <div class="tram-effects" aria-label="발표 강조점">
+              ${event.effects.map((effect) => `<span>${effect}</span>`).join('')}
+            </div>
+            <p>${event.summary}</p>
+            <div class="tram-impact">
+              <span>사회 변화</span>
+              <strong>${event.impact}</strong>
+            </div>
+          </div>
+        </article>
+      `
+    )
+    .join('');
+
+  const update = (index        , shouldScroll = true) => {
+    activeIndex = Math.min(historyScenes.length - 1, Math.max(0, index));
+    const progress = activeIndex / (historyScenes.length - 1);
+    const event = historyScenes[activeIndex];
+    tram.style.setProperty('--tram-progress', String(progress));
+    title.textContent = event.title;
+    year.textContent = event.year;
+    queryAll                   ('.tram-stop', stops).forEach((button, buttonIndex) => {
+      const active = buttonIndex === activeIndex;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-current', active ? 'step' : 'false');
     });
-    card.innerHTML = `
-      <figure class="year-visual">
-        <img src="${event.image.src}" alt="${event.image.alt}" loading="eager" />
-        <figcaption>
-          <a href="${event.image.href}" target="_blank" rel="noreferrer">${event.image.credit}</a>
-        </figcaption>
-      </figure>
-      <div class="year-story">
-        <span class="year-chip">${event.year}</span>
-        <p class="facility-label">${event.facility}</p>
-        <h3>${event.title}</h3>
-        <p>${event.summary}</p>
-        <div class="impact-line">
-          <span>사회 변화</span>
-          <strong>${event.impact}</strong>
-        </div>
-      </div>
-    `;
+    queryAll             ('.tram-panel', windowStrip).forEach((panel, panelIndex) => {
+      const active = panelIndex === activeIndex;
+      panel.classList.toggle('is-active', active);
+      panel.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+    if (shouldScroll) {
+      query             (`.tram-panel[data-scene-index="${activeIndex}"]`, windowStrip).scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
+    }
+    previous.disabled = activeIndex === 0;
+    next.disabled = activeIndex === historyScenes.length - 1;
   };
 
-  list.addEventListener('click', (event) => {
-    const button = (event.target               ).closest                   ('[data-year-index]');
+  stops.addEventListener('click', (event) => {
+    const button = (event.target               ).closest                   ('[data-scene-index]');
     if (!button) return;
-    update(Number(button.dataset.yearIndex || '0'));
+    update(Number(button.dataset.sceneIndex || '0'));
   });
-
-  scrubber.addEventListener('input', () => update(Number(scrubber.value)));
+  windowStrip.addEventListener('click', (event) => {
+    const panel = (event.target               ).closest             ('.tram-panel');
+    if (!panel) return;
+    update(Number(panel.dataset.sceneIndex || '0'));
+  });
+  previous.addEventListener('click', () => {
+    update(activeIndex - 1);
+  });
+  next.addEventListener('click', () => {
+    update(activeIndex + 1);
+  });
+  windowStrip.addEventListener('scroll', () => {
+    window.clearTimeout(Number(windowStrip.dataset.scrollTimer || '0'));
+    const timer = window.setTimeout(() => {
+      const panels = queryAll             ('.tram-panel', windowStrip);
+      const center = windowStrip.getBoundingClientRect().left + windowStrip.clientWidth / 2;
+      const closest = panels.reduce(
+        (best, panel, index) => {
+          const rect = panel.getBoundingClientRect();
+          const distance = Math.abs(rect.left + rect.width / 2 - center);
+          return distance < best.distance ? { index, distance } : best;
+        },
+        { index: activeIndex, distance: Number.POSITIVE_INFINITY }
+      );
+      update(closest.index, false);
+    }, 120);
+    windowStrip.dataset.scrollTimer = String(timer);
+  });
+  tram.addEventListener('pointermove', (event) => {
+    const rect = tram.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    tram.style.setProperty('--tram-x', `${Math.round(x * 100)}%`);
+    tram.style.setProperty('--tram-y', `${Math.round(y * 100)}%`);
+  });
+  tram.addEventListener('pointerleave', () => {
+    tram.style.setProperty('--tram-x', '50%');
+    tram.style.setProperty('--tram-y', '50%');
+  });
+  historyScenes.forEach((event) => {
+    const image = new Image();
+    image.src = event.image.src;
+  });
   update(0);
 };
 
@@ -285,8 +376,6 @@ const setupReveal = () => {
 const setupProgress = () => {
   const bar = query             ('.progress-bar');
   const sections = queryAll             ('.chapter');
-  const dockTitle = query             ('[data-current-section]');
-  const dockCue = query             ('[data-current-cue]');
 
   const update = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -299,8 +388,6 @@ const setupProgress = () => {
     }, sections[0]);
 
     const id = active.id;
-    dockTitle.textContent = sectionTitles.get(id) || '발표';
-    dockCue.textContent = active.dataset.cue || '';
     queryAll                   ('[data-jump]').forEach((button) => {
       button.classList.toggle('is-active', button.dataset.jump === `#${id}`);
     });
@@ -352,7 +439,7 @@ const setupParallax = () => {
   update();
 };
 
-renderTimeline();
+renderTramLine();
 renderGallery();
 setupLens();
 setupReveal();
