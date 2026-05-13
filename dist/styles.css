@@ -13,6 +13,7 @@
   --line: rgba(24, 21, 17, 0.18);
   --shadow: 0 20px 60px rgba(24, 21, 17, 0.18);
   --image-shift: 0px;
+  --slide-height: min(100svh, 56.25vw);
   color: var(--ink);
   background: var(--paper);
   font-family:
@@ -281,26 +282,6 @@ p {
   pointer-events: none;
 }
 
-.tram-wire {
-  position: absolute;
-  left: -12%;
-  right: -12%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(194, 139, 44, 0.62), rgba(246, 247, 242, 0.34), transparent);
-  animation: tramWire 10s linear infinite;
-}
-
-.tram-wire-one {
-  top: 18%;
-  transform: rotate(-5deg);
-}
-
-.tram-wire-two {
-  top: 34%;
-  transform: rotate(4deg);
-  animation-delay: 3s;
-}
-
 .tram-spark {
   position: absolute;
   width: 92px;
@@ -309,11 +290,6 @@ p {
   background: radial-gradient(circle, rgba(194, 139, 44, 0.62), transparent 62%);
   filter: blur(1px);
   animation: tramSpark 2.8s ease-in-out infinite;
-}
-
-.tram-spark-one {
-  right: 18%;
-  top: 18%;
 }
 
 .tram-spark-two {
@@ -709,7 +685,7 @@ p {
   grid-template-columns: repeat(2, 44px);
   gap: 0;
   align-items: center;
-  margin: 0 30px 30px;
+  margin: 0 30px 30px 104px;
   padding: 8px;
   border: 1px solid rgba(246, 247, 242, 0.18);
   border-radius: 8px;
@@ -1020,17 +996,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   }
 }
 
-@keyframes tramWire {
-  from {
-    background-position: -180px 0;
-    opacity: 0.52;
-  }
-  to {
-    background-position: 180px 0;
-    opacity: 0.88;
-  }
-}
-
 @keyframes tramSpark {
   0%,
   100% {
@@ -1040,6 +1005,215 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   50% {
     opacity: 0.86;
     transform: scale(1.12);
+  }
+}
+
+@media (min-width: 921px) {
+  .chapter {
+    height: var(--slide-height);
+    min-height: 0;
+    overflow: hidden;
+    scroll-margin-top: 0;
+  }
+
+  .hero,
+  .closing {
+    height: var(--slide-height);
+    min-height: 0;
+  }
+
+  .hero {
+    padding-top: clamp(56px, 7vw, 104px);
+    padding-bottom: clamp(48px, 5vw, 76px);
+  }
+
+  h1 {
+    font-size: clamp(3.3rem, 4.2vw, 4.6rem);
+  }
+
+  h2 {
+    font-size: clamp(2.05rem, 2.7vw, 2.8rem);
+  }
+
+  .section-heading {
+    padding: 12px 0 14px;
+  }
+
+  .section-heading p:last-child {
+    margin-top: 8px;
+    font-size: 0.98rem;
+  }
+
+  .chronology .section-heading {
+    width: min(1500px, calc(100% - 48px));
+    padding: 10px 0 8px;
+  }
+
+  .chronology .section-heading .kicker {
+    margin-bottom: 6px;
+  }
+
+  .chronology .section-heading h2 {
+    max-width: none;
+  }
+
+  .chronology .section-heading p:last-child {
+    max-width: 1180px;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    line-height: 1.42;
+  }
+
+  .section-heading p:last-child,
+  .hero-lead,
+  .gallery-copy p,
+  .lens-card p {
+    line-height: 1.58;
+  }
+
+  .tram-journey,
+  .gallery-stage,
+  .lens-switcher {
+    margin-bottom: 0;
+  }
+
+  .tram-journey {
+    display: grid;
+    width: min(1500px, calc(100% - 32px));
+    height: calc(var(--slide-height) - clamp(132px, 12vw, 170px));
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+  }
+
+  .tram-heading {
+    padding: 12px clamp(24px, 2vw, 34px) 2px;
+  }
+
+  .tram-heading h3 {
+    font-size: clamp(1.6rem, 1.9vw, 2.1rem);
+  }
+
+  .tram-ticket {
+    min-width: 128px;
+    min-height: 58px;
+    padding: 8px 12px;
+  }
+
+  .tram-ticket span {
+    font-size: 1.75rem;
+  }
+
+  .tram-track {
+    margin: 0 clamp(24px, 2vw, 34px);
+    padding: 10px 0 44px;
+  }
+
+  .tram-track::before,
+  .tram-track::after {
+    top: 34px;
+  }
+
+  .tram-car {
+    top: -3px;
+    width: 88px;
+    height: 46px;
+    left: calc(var(--tram-progress) * (100% - 88px));
+  }
+
+  .tram-window-light {
+    left: 14px;
+    right: 14px;
+    top: 10px;
+    height: 13px;
+  }
+
+  .tram-window {
+    min-height: 0;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0 clamp(24px, 2vw, 34px) clamp(8px, 1vw, 16px);
+    scroll-padding-inline: clamp(24px, 2vw, 34px);
+  }
+
+  .tram-panel {
+    grid-template-columns: minmax(360px, 0.96fr) minmax(420px, 1.04fr);
+    flex-basis: min(1120px, 88%);
+    height: 100%;
+    min-height: 0;
+  }
+
+  .tram-photo {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .tram-story {
+    gap: 8px;
+    padding: clamp(18px, 1.6vw, 28px);
+  }
+
+  .tram-meta span,
+  .tram-effects span,
+  .tram-facility {
+    min-height: 26px;
+    padding: 5px 8px;
+    font-size: 0.82rem;
+  }
+
+  .tram-story h3 {
+    font-size: clamp(1.7rem, 2vw, 2.2rem);
+  }
+
+  .tram-story p:not(.tram-facility) {
+    font-size: clamp(0.95rem, 1vw, 1.05rem);
+    line-height: 1.5;
+  }
+
+  .tram-impact {
+    gap: 6px;
+    margin-top: 4px;
+    padding: clamp(12px, 1.1vw, 16px);
+  }
+
+  .tram-impact strong {
+    line-height: 1.45;
+  }
+
+  .tram-controls {
+    margin: 0 clamp(24px, 2vw, 34px) clamp(10px, 1vw, 18px) clamp(132px, 10vw, 160px);
+    padding: 6px;
+  }
+
+  .tram-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-stage {
+    grid-template-columns: 0.68fr 1.32fr;
+    gap: 30px;
+  }
+
+  .history-image,
+  .history-image img {
+    min-height: clamp(330px, 31vw, 440px);
+  }
+
+  .history-image figcaption {
+    padding: 18px;
+  }
+
+  .lens-grid {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .lens-card {
+    min-height: clamp(190px, 17vw, 240px);
+    padding: 24px;
+  }
+
+  .closing {
+    padding: 76px 20px 110px;
   }
 }
 
