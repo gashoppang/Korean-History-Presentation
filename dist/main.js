@@ -49,10 +49,10 @@ const historyScenes                 = [
     year: '1884',
     title: '우정총국',
     facility: '근대식 우편 사무',
-    signal: '소식의 속도',
+    signal: '우편 제도',
     effects: ['소통 제도', '국가 행정', '중단과 재개'],
     summary: '근대식 우편 사무가 도입되었지만 갑신정변 이후 약 10여 년 동안 중단되었다.',
-    impact: '소식이 제도와 속도의 문제로 바뀌는 출발점이었다.',
+    impact: '국가가 우편과 통신을 제도적으로 운영하려는 시도가 나타났다.',
     image: {
       src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Post%20Office%20building%2C%20Seoul%2C%201893%20%281%29%20%2826259287247%29.jpg?width=1100',
       alt: '서울 우정총국 건물',
@@ -79,10 +79,10 @@ const historyScenes                 = [
     year: '1887',
     title: '경복궁 전등',
     facility: '전기와 궁궐의 밤',
-    signal: '밤의 확장',
+    signal: '전기 도입',
     effects: ['전기 기술', '밤의 활동', '도시 감각'],
     summary: '전기 기술 도입으로 궁궐에 최초의 전등이 설치되었다.',
-    impact: '밤에도 활동할 수 있는 공간이 생기며 도시의 시간 감각이 확장되었다.',
+    impact: '전기 기술이 궁궐과 도시 공간에 도입되는 계기가 되었다.',
     image: {
       src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gyeongbokgung_1906_1.jpg?width=1100',
       alt: '1906년 경복궁 전경',
@@ -94,10 +94,10 @@ const historyScenes                 = [
     year: '1899',
     title: '전차와 경인선',
     facility: '도시 전차와 첫 철도',
-    signal: '움직이는 도시',
+    signal: '교통 변화',
     effects: ['이동 속도', '도시 연결', '정시 생활'],
     summary: '서대문과 청량리를 잇는 전차가 개통되고, 경인선 철도도 운행을 시작했다.',
-    impact: '사람과 물자의 이동 속도가 빨라지고 정시 출발이라는 시간 감각이 퍼졌다.',
+    impact: '사람과 물자의 이동이 이전보다 편리해지고 교통망의 중요성이 커졌다.',
     image: {
       src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Opening_of_the_Trams_in_Seoul_(1899).png?width=1100',
       alt: '1899년 서울 전차 개통 장면',
@@ -125,9 +125,9 @@ const historyScenes                 = [
     title: '경의선',
     facility: '더 넓어진 철도망',
     signal: '철도망 확대',
-    effects: ['공간 압축', '군사 이동', '지배 통로'],
+    effects: ['지역 연결', '군사 이동', '지배 통로'],
     summary: '경의선 개통으로 철도망은 더 넓은 지역을 연결했다.',
-    impact: '근대적 연결망은 생활을 바꾸는 동시에 제국주의적 지배의 통로가 되기도 했다.',
+    impact: '철도망은 지역을 연결했지만 군사적, 정치적 목적에도 이용되었다.',
     image: {
       src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/1906년의_용산역.jpg?width=1100',
       alt: '1906년 무렵 용산역',
@@ -140,19 +140,19 @@ const historyScenes                 = [
 const gallery                = [
   {
     title: '광혜원',
-    caption: '서양식 병원은 치료를 집과 의원의 문제에서 제도화된 의료 공간으로 옮겨 놓았다.',
+    caption: '서양식 병원은 새로운 의료 기술과 병원 제도가 들어오는 계기가 되었다.',
     src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gwanghyewon.jpg?width=1000',
     credit: 'Wikimedia Commons'
   },
   {
     title: '정관헌',
-    caption: '고종이 외교 사절을 맞이하고 다과와 음악을 즐기던 근대 건축의 상징적 공간이다.',
+    caption: '고종이 외교 사절을 맞이하던 공간으로, 서양식 건축 요소가 반영되어 있다.',
     src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Deoksugung-jeonggwanheon.jpg?width=1000',
     credit: 'Kimhs5400, CC BY-SA 4.0'
   },
   {
     title: '덕수궁 석조전',
-    caption: '당대 최대 규모의 서양식 건축물로, 궁궐 안에 들어온 새로운 공간 감각을 보여 준다.',
+    caption: '궁궐 안에 세워진 서양식 건축물로, 당시 건축 양식의 변화를 보여 준다.',
     src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Seokjojeon.jpg?width=1000',
     credit: 'Kimhs5400, CC BY-SA 4.0'
   }
@@ -162,12 +162,12 @@ const lensCopy                             = {
   convenience: {
     technology: '전등은 밤을 밝히고, 전화와 우편은 먼 곳의 소식을 더 빠르게 전달했다.',
     people: '전차와 철도는 이동 시간을 줄이며 도시 생활의 폭을 넓혔다.',
-    time: '정해진 시간에 출발하고 도착하는 교통망은 표준 시간과 공중 시계의 필요를 키웠다.'
+    time: '정해진 시간에 출발하고 도착하는 교통망은 시간 운영 방식에도 영향을 주었다.'
   },
   pressure: {
     technology: '일부 근대 시설은 외세가 조선을 침략하고 지배하는 수단으로도 이용되었다.',
     people: '철도 건설 과정에서 토지가 강제로 수용되고 백성들이 노역에 동원되었다.',
-    time: '근대적 시간 질서는 편리했지만, 사람들을 새로운 제도와 통제의 리듬에 맞추게 했다.'
+    time: '새로운 시간 운영 방식은 편리함을 주었지만 제도적 통제와도 연결되었다.'
   }
 };
 
@@ -220,7 +220,6 @@ const renderTramLine = () => {
           </figure>
           <div class="tram-story">
             <div class="tram-meta">
-              <span>장면 ${String(index + 1).padStart(2, '0')}</span>
               <span>${event.year}</span>
               <span>${event.signal}</span>
             </div>

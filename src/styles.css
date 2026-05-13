@@ -77,62 +77,6 @@ a {
   background: linear-gradient(90deg, var(--cinnabar), var(--brass), var(--teal));
 }
 
-.site-header {
-  position: fixed;
-  top: 18px;
-  left: 50%;
-  z-index: 30;
-  display: flex;
-  width: min(1120px, calc(100% - 28px));
-  min-height: 58px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 10px 12px;
-  color: var(--porcelain);
-  background: rgba(21, 23, 22, 0.74);
-  border: 1px solid rgba(246, 247, 242, 0.2);
-  border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(18px);
-  transform: translateX(-50%);
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-width: max-content;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.brand-mark {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, var(--brass) 0 18%, transparent 19%),
-    conic-gradient(from 45deg, var(--cinnabar), var(--brass), var(--teal), var(--cinnabar));
-}
-
-.brand-mark::after {
-  position: absolute;
-  inset: 7px;
-  content: "";
-  border: 2px solid rgba(21, 23, 22, 0.8);
-  border-radius: 50%;
-}
-
-.chapter-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 6px;
-}
-
-.chapter-nav button,
 .segmented button {
   min-height: 36px;
   padding: 0 12px;
@@ -140,18 +84,6 @@ a {
   border-radius: 8px;
   color: inherit;
   background: transparent;
-}
-
-.chapter-nav button {
-  color: rgba(246, 247, 242, 0.78);
-}
-
-.chapter-nav button:hover,
-.chapter-nav button:focus-visible,
-.chapter-nav button.is-active {
-  color: var(--night);
-  background: var(--brass);
-  outline: 0;
 }
 
 .chapter {
@@ -164,7 +96,7 @@ a {
   display: grid;
   min-height: 92svh;
   align-items: end;
-  padding: 140px max(24px, calc((100% - 1120px) / 2)) 80px;
+  padding: 104px max(24px, calc((100% - 1120px) / 2)) 80px;
   color: var(--porcelain);
   background: var(--night);
 }
@@ -429,11 +361,6 @@ p {
   font-size: 2.2rem;
   font-weight: 900;
   line-height: 1;
-}
-
-.tram-ticket small {
-  color: rgba(246, 247, 242, 0.66);
-  font-weight: 900;
 }
 
 .tram-track {
@@ -729,11 +656,6 @@ p {
   font-size: 0.9rem;
 }
 
-.tram-meta span:first-child {
-  color: var(--porcelain);
-  background: rgba(18, 107, 102, 0.78);
-}
-
 .tram-facility {
   width: fit-content;
   margin: 0;
@@ -985,24 +907,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   font-size: 1.12rem;
 }
 
-.closing-lines {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 34px;
-}
-
-.closing-lines span {
-  min-height: 112px;
-  padding: 22px;
-  border: 1px solid rgba(246, 247, 242, 0.2);
-  border-radius: 8px;
-  background: rgba(246, 247, 242, 0.08);
-  font-size: 1.1rem;
-  font-weight: 900;
-  line-height: 1.5;
-}
-
 .presenter-dock {
   position: fixed;
   left: 20px;
@@ -1083,14 +987,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   transform: translateY(0);
 }
 
-.site-header[data-reveal] {
-  transform: translateX(-50%) translateY(22px);
-}
-
-.site-header[data-reveal].is-visible {
-  transform: translateX(-50%) translateY(0);
-}
-
 .history-image {
   transform: translateY(calc(var(--stack-offset, 0px) + 22px));
 }
@@ -1148,19 +1044,6 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
 }
 
 @media (max-width: 920px) {
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .chapter-nav {
-    width: 100%;
-  }
-
-  .chapter-nav {
-    justify-content: flex-start;
-  }
-
   h1 {
     font-size: 3.35rem;
   }
@@ -1184,8 +1067,7 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
   }
 
   .gallery-stage,
-  .lens-grid,
-  .closing-lines {
+  .lens-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1208,20 +1090,9 @@ body[data-lens="pressure"] .segmented button[aria-selected="true"] {
 }
 
 @media (max-width: 640px) {
-  .site-header {
-    top: 10px;
-    max-height: 190px;
-    overflow: auto;
-  }
-
-  .chapter-nav button {
-    flex: 1 1 76px;
-    padding: 0 8px;
-  }
-
   .hero {
     min-height: 94svh;
-    padding-top: 188px;
+    padding-top: 104px;
   }
 
   h1 {
