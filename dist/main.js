@@ -19,6 +19,7 @@
                   
               
                  
+               
   
 
                                            
@@ -39,10 +40,10 @@ const historyScenes                 = [
     summary: '신문 발간, 근대식 무기 공장, 화폐 주조 기관이 함께 등장했다.',
     impact: '정보, 군사 기술, 경제 제도가 근대적 방식으로 정비되기 시작했다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Hanseong_Sunbo.jpg?width=900',
+      src: 'https://contents.history.go.kr/data/img/ta/ta_e32/ta_e32_1080_01.jpg',
       alt: '한성순보 창간호',
-      credit: '한성순보 창간호, Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:Hanseong_Sunbo.jpg'
+      credit: '한성순보, 우리역사넷(국사편찬위원회)',
+      href: 'https://contents.history.go.kr/front/ta/view.do?levelId=ta_e32_0070_0020_0020'
     }
   },
   {
@@ -54,10 +55,10 @@ const historyScenes                 = [
     summary: '근대식 우편 사무가 도입되었지만 갑신정변 이후 약 10여 년 동안 중단되었다.',
     impact: '국가가 우편과 통신을 제도적으로 운영하려는 시도가 나타났다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Post%20Office%20building%2C%20Seoul%2C%201893%20%281%29%20%2826259287247%29.jpg?width=1100',
+      src: 'https://devin.aks.ac.kr/image/5e07923c-6a47-4d74-9ffc-28a189bf3e34?preset=page',
       alt: '서울 우정총국 건물',
-      credit: '우정총국 건물, Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/Category:Ujeongchongguk'
+      credit: '서울 우정총국 정면, 한국민족문화대백과사전',
+      href: 'https://encykorea.aks.ac.kr/Article/E0040100'
     }
   },
   {
@@ -69,10 +70,10 @@ const historyScenes                 = [
     summary: '알렌의 건의로 최초의 서양식 병원이 세워지고 제중원으로 이어졌다.',
     impact: '서양 의학은 개신교 선교사들을 통해 들어오며 치료의 방식을 바꾸었다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gwanghyewon.jpg?width=1000',
+      src: 'https://contents.history.go.kr/data/img/ta/ta_e61/ta_e61_1000_01.jpg',
       alt: '광혜원 건물',
-      credit: '광혜원, Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:Gwanghyewon.jpg'
+      credit: '광혜원, 우리역사넷(국사편찬위원회)',
+      href: 'https://contents.history.go.kr/front/ta/view.do?levelId=ta_e61_0020_0030_0040'
     }
   },
   {
@@ -84,10 +85,10 @@ const historyScenes                 = [
     summary: '전기 기술 도입으로 궁궐에 최초의 전등이 설치되었다.',
     impact: '전기 기술이 궁궐과 도시 공간에 도입되는 계기가 되었다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gyeongbokgung_1906_1.jpg?width=1100',
-      alt: '1906년 경복궁 전경',
-      credit: '경복궁 1906, Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:Gyeongbokgung_1906_1.jpg'
+      src: 'https://www.museum.go.kr/dryplate/imagePath.do?check=E&imgFile=pan000011.jpg',
+      alt: '1909년 경복궁 근정전 어계',
+      credit: '경복궁 근정전 어계(1909), 국립중앙박물관',
+      href: 'https://www.museum.go.kr/dryplate/searchplate_view.do?relicnum=000011'
     }
   },
   {
@@ -99,10 +100,10 @@ const historyScenes                 = [
     summary: '서대문과 청량리를 잇는 전차가 개통되고, 경인선 철도도 운행을 시작했다.',
     impact: '사람과 물자의 이동이 이전보다 편리해지고 교통망의 중요성이 커졌다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Opening_of_the_Trams_in_Seoul_(1899).png?width=1100',
-      alt: '1899년 서울 전차 개통 장면',
-      credit: '서울 전차 개통, 서울역사박물관 / Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:Opening_of_the_Trams_in_Seoul_(1899).png'
+      src: 'https://contents.history.go.kr/data/img/km/km_022_big/km_022_072_01.jpg',
+      alt: '경인선 귀빈 객차',
+      credit: '경인선 객차-귀빈 객차, 우리역사넷(국사편찬위원회)',
+      href: 'https://contents.history.go.kr/front/km/view.do?levelId=km_022_0040_0010_0030'
     }
   },
   {
@@ -114,10 +115,10 @@ const historyScenes                 = [
     summary: '한반도 남북의 주요 거점을 잇는 철도가 일본에 의해 부설되었다.',
     impact: '편리함 뒤에는 이권 침탈과 강제 수용, 노역 동원이라는 갈등이 있었다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Formal_Opening_Inside_Of_Gyeongbu_Train.png?width=1100',
-      alt: '경부철도 개통식 내부 장면',
-      credit: '경부철도 개통식, Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:Formal_Opening_Inside_Of_Gyeongbu_Train.png'
+      src: 'https://contents.history.go.kr/data/img/km/km_004/km_004_039_01.jpg',
+      alt: '경부선 개통식',
+      credit: '경부선 개통식, 우리역사넷(국사편찬위원회)',
+      href: 'https://contents.history.go.kr/front/km/view.do?levelId=km_004_0030_0020_0030_0020'
     }
   },
   {
@@ -129,10 +130,10 @@ const historyScenes                 = [
     summary: '경의선 개통으로 철도망은 더 넓은 지역을 연결했다.',
     impact: '철도망은 지역을 연결했지만 군사적, 정치적 목적에도 이용되었다.',
     image: {
-      src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/1906년의_용산역.jpg?width=1100',
-      alt: '1906년 무렵 용산역',
-      credit: '1906년 용산역, 서울역사아카이브 / Wikimedia Commons',
-      href: 'https://commons.wikimedia.org/wiki/File:1906%EB%85%84%EC%9D%98_%EC%9A%A9%EC%82%B0%EC%97%AD.jpg'
+      src: 'https://museum.seoul.go.kr:8088/ARCHIVE_DATA/master/1011/A000000247/f86c88f2-8a29-451a-ab7b-7e8ed665089c.jpg',
+      alt: '서울역사아카이브의 용산 정거장 사진',
+      credit: '용산 정거장, 서울역사아카이브',
+      href: 'https://museum.seoul.go.kr/archive/archiveNew/NR_archiveView.do?ctgryId=CTGRY805&currentPage=1&fileId=H-TRNS-75929-805&fileSn=300&searchVal=&subCtgryId=&type=D&upperNodeId=CTGRY805'
     }
   }
 ];
@@ -141,20 +142,23 @@ const gallery                = [
   {
     title: '광혜원',
     caption: '서양식 병원은 새로운 의료 기술과 병원 제도가 들어오는 계기가 되었다.',
-    src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Gwanghyewon.jpg?width=1000',
-    credit: 'Wikimedia Commons'
+    src: 'https://contents.history.go.kr/data/img/ta/ta_e61/ta_e61_1000_01.jpg',
+    credit: '우리역사넷(국사편찬위원회)',
+    href: 'https://contents.history.go.kr/front/ta/view.do?levelId=ta_e61_0020_0030_0040'
   },
   {
-    title: '정관헌',
-    caption: '고종이 외교 사절을 맞이하던 공간으로, 서양식 건축 요소가 반영되어 있다.',
-    src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Deoksugung-jeonggwanheon.jpg?width=1000',
-    credit: 'Kimhs5400, CC BY-SA 4.0'
+    title: '덕수궁 근대 건축',
+    caption: '덕수궁에는 정관헌과 석조전처럼 전통과 서양식 건축 요소가 함께 나타나는 공간이 남아 있다.',
+    src: 'https://www.heritage.go.kr/images/2025/contents/palace/dsg/img01.png',
+    credit: '국가유산청 국가유산포털',
+    href: 'https://heritage.go.kr/heri/html/HtmlPage.do?pageNo=3_1_1_0&pg=%2Fpalaces%2FpalacesDeokInfo.jsp'
   },
   {
     title: '덕수궁 석조전',
     caption: '궁궐 안에 세워진 서양식 건축물로, 당시 건축 양식의 변화를 보여 준다.',
-    src: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Seokjojeon.jpg?width=1000',
-    credit: 'Kimhs5400, CC BY-SA 4.0'
+    src: 'https://devin.aks.ac.kr/image/e71bf757-cefb-4565-b933-7ec210aba6ab?preset=page',
+    credit: '한국민족문화대백과사전',
+    href: 'https://encykorea.aks.ac.kr/Article/E0015365'
   }
 ];
 
@@ -327,7 +331,7 @@ const renderGallery = () => {
           <figcaption>
             <strong>${item.title}</strong>
             <span>${item.caption}</span>
-            <small>${item.credit}</small>
+            <small><a href="${item.href}" target="_blank" rel="noreferrer">${item.credit}</a></small>
           </figcaption>
         </figure>
       `
