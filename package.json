@@ -1,0 +1,12 @@
+{
+  "name": "korean-history-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node --disable-warning=ExperimentalWarning scripts/build.mjs",
+    "dev": "node --disable-warning=ExperimentalWarning scripts/serve.mjs",
+    "start": "node --disable-warning=ExperimentalWarning scripts/serve.mjs"
+  },
+  "devDependencies": {}
+}
